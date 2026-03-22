@@ -1,3 +1,32 @@
-function showMessage() {
-  alert("Welcome to my portfolio 🚀");
-}
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  try {
+    const response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        message: message
+      })
+    });
+
+    const data = await response.text();
+
+    alert("Message sent successfully 🚀");
+
+    // Clear form
+    document.getElementById("contactForm").reset();
+
+  } catch (error) {
+    alert("Error sending message ❌");
+    console.error(error);
+  }
+});

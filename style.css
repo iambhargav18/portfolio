@@ -8,14 +8,20 @@
 body {
   background: #111;
   color: white;
+  line-height: 1.6;
 }
 
 /* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 30px;
   background: #1a1a1a;
+}
+
+nav h2 {
+  color: orange;
 }
 
 nav ul {
@@ -32,10 +38,18 @@ nav ul li a {
   text-decoration: none;
 }
 
+nav ul li a:hover {
+  color: orange;
+}
+
 /* Hero */
 .hero {
   text-align: center;
   padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
 }
 
 /* Sections */
@@ -51,15 +65,53 @@ section {
 
 .skills-list li {
   margin: 10px 0;
+  background: #222;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
 /* Projects */
 .project {
   background: #222;
   padding: 15px;
-  margin: 10px auto;
+  margin: 15px auto;
   width: 300px;
   border-radius: 10px;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+}
+
+form input,
+form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+form button {
+  padding: 10px;
+  background: orange;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background: #ff9900;
 }
 
 /* Footer */
@@ -67,4 +119,5 @@ footer {
   text-align: center;
   padding: 20px;
   background: #1a1a1a;
+  margin-top: 20px;
 }

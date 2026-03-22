@@ -19,7 +19,7 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Hello, I'm Bhargav 👋</h1>
     <p>A beginner web developer</p>
@@ -57,12 +57,23 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: bhargavvictus@gmail.com</p>
+
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2026 Bhargav</p>
   </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
 
 </body>
 </html>
